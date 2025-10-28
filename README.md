@@ -1,50 +1,98 @@
-# Welcome to your Expo app 👋
+# UTS Project - Database (Expo App)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+> Expo React Native project for UTS, featuring a furniture shopping experience with cart, checkout, and product browsing.
 
-## Get started
+---
 
-1. Install dependencies
+## � Workspace Structure
 
+```
+├── app/                # Main app screens & routing
+│   ├── _layout.tsx
+│   ├── cart.tsx
+│   ├── checkout.tsx
+│   ├── modal.tsx
+│   ├── (tabs)/         # Tab navigation & screens
+│   │   ├── _layout.tsx
+│   │   ├── index.tsx
+│   │   └── search.tsx
+│   └── product/
+│       └── [id].tsx    # Product detail page
+├── assets/             # Images & static assets
+├── components/         # Reusable UI components
+│   ├── FurnitureCard.tsx
+│   ├── haptic-tab.tsx
+│   ├── parallax-scroll-view.tsx
+│   └── ui/
+├── constants/          # Theme and constants
+├── data/               # Data files
+├── hooks/              # Custom React hooks
+├── lib/                # Service & utility libraries
+│   ├── furniture-service.ts
+│   ├── order-service.ts
+│   └── supabase.ts
+├── scripts/            # Project scripts
+├── store/              # State management (e.g., shopping-list)
+├── utils/              # Utility functions
+├── app.json            # Expo config
+├── package.json        # NPM dependencies
+├── tsconfig.json       # TypeScript config
+└── README.md           # Project info
+```
+
+---
+
+## 🚀 Getting Started
+
+1. **Install dependencies**
    ```bash
    npm install
    ```
 
-2. Start the app
-
+2. **Start the app**
    ```bash
    npx expo start
    ```
+   - Scan the QR code with Expo Go, or run on an emulator/simulator.
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 🛒 Main Features
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- Product listing & detail view
+- Shopping cart & checkout flow
+- Tab navigation (Home, Search, etc.)
+- Themed UI components
+- State management with custom store
+- Integration with Supabase (see `lib/supabase.ts`)
 
-## Get a fresh project
+---
 
-When you're ready, run:
+## 🛠 Development
 
+- Edit screens in the `app/` directory (uses [file-based routing](https://docs.expo.dev/router/introduction/)).
+- Add or update UI in `components/`.
+- Manage state in `store/`.
+- Utility and service logic in `lib/` and `utils/`.
+
+### Reset Project
+To reset to a blank app structure:
 ```bash
 npm run reset-project
 ```
+This will move starter code to `app-example/` and create a blank `app/` directory.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 📚 Resources
 
-To learn more about developing your project with Expo, look at the following resources:
+- [Expo Documentation](https://docs.expo.dev/)
+- [React Native Docs](https://reactnative.dev/)
+- [Supabase Docs](https://supabase.com/docs)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## 👥 Community
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- [Expo on GitHub](https://github.com/expo/expo)
+- [Expo Discord](https://chat.expo.dev)
