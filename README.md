@@ -1,6 +1,7 @@
 # UTS Project - Database (Expo App)
 
 > Expo React Native project for UTS, featuring a furniture shopping experience with cart, checkout, and product browsing.
+> Link Loom : https://www.loom.com/share/209a5f66d97c4d4e8d56394b1e90cc0e
 
 ---
 
