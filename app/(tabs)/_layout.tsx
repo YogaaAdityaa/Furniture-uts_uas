@@ -1,6 +1,7 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
-
+import { useEffect } from 'react';
+import Airbridge from 'airbridge-react-native-sdk';
 import { HapticTab } from '@/components/haptic-tab';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { Colors } from '@/constants/theme';
@@ -9,8 +10,15 @@ import { Ionicons } from '@expo/vector-icons';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
-
+  useEffect(() => {
+    if (Airbridge && (Airbridge as any).init) {
+      (Airbridge as any).init("utsproject", "897eb656966146ec89bfc6ee738e617a897eb656966146ec89bfc6ee738e617a");
+    } else {
+      console.log("Airbridge is not available");
+    }
+  }, []);
   return (
+
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
